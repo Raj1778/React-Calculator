@@ -1,8 +1,8 @@
 import styles from "./ButtonsContainer.module.css";
+
 const ButtonsContainer = ({ onButtonClick }) => {
   const buttonNames = [
     "C",
-    "+/-",
     "%",
     "÷",
     "7",
@@ -21,19 +21,20 @@ const ButtonsContainer = ({ onButtonClick }) => {
     ".",
     "=",
   ];
+
   return (
     <div className={styles.buttonsContainer}>
-      {buttonNames.map((buttonName) => {
-        return (
-          <button
-            className={styles.button}
-            onClick={() => onButtonClick(buttonName)}
-          >
-            {buttonName}
-          </button>
-        );
-      })}
+      {buttonNames.map((buttonName, index) => (
+        <button
+          key={index}
+          className={styles.button}
+          onClick={() => onButtonClick(buttonName)}
+        >
+          {buttonName}
+        </button>
+      ))}
     </div>
   );
 };
+
 export default ButtonsContainer;
