@@ -5,21 +5,22 @@ const ButtonsContainer = ({ onButtonClick }) => {
     "C",
     "%",
     "÷",
+    "x",
     "7",
     "8",
     "9",
-    "x",
+    "-",
     "4",
     "5",
     "6",
-    "-",
+    "+",
     "1",
     "2",
     "3",
-    "+",
+    "=",
     "0",
     ".",
-    "=",
+    "+/-",
   ];
 
   return (
@@ -27,7 +28,9 @@ const ButtonsContainer = ({ onButtonClick }) => {
       {buttonNames.map((buttonName, index) => (
         <button
           key={index}
-          className={styles.button}
+          className={`${styles.button} ${
+            buttonName === "0" ? styles.zeroButton : ""
+          }`}
           onClick={() => onButtonClick(buttonName)}
         >
           {buttonName}

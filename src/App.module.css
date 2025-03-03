@@ -1,8 +1,9 @@
 .calculator {
-  background-color: #f5f5f5;
-  border-radius: 1px solid black;
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
-  width: 200px;
-  border-radius: 5px;
-  margin-top: 20px;
+  width: 320px;
+  background: #1e1e1e;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  margin: auto;
+  text-align: center;
 }
